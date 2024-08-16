@@ -6,19 +6,19 @@ import axios from 'axios';
 const BASE_URL = "https://66b8e1ef3ce57325ac7864b0.mockapi.io/contacts";
 
 export const fetchContacts = createAsyncThunk(
-  'contacts/fetchAll',
+  "contacts/fetchAll",
   async (_, thunkAPI) => {
     try {
       const response = await axios.get(BASE_URL);
-      return response.data
+      return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message)
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 export const addContact = createAsyncThunk(
-  'contacts/addContact',
+  "contacts/addContact",
   async (contact, thunkAPI) => {
     try {
       const response = await axios.post(BASE_URL, contact);
@@ -30,7 +30,7 @@ export const addContact = createAsyncThunk(
 );
 
 export const deleteContact = createAsyncThunk(
-  'contacts/deleteContact',
+  "contacts/deleteContact",
   async (id, thunkAPI) => {
     try {
       await axios.delete(`${BASE_URL}/${id}`);
@@ -40,6 +40,9 @@ export const deleteContact = createAsyncThunk(
     }
   }
 );
+
+
+
 
 
 

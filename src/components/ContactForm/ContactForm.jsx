@@ -1,3 +1,5 @@
+// ContactForm.jsx
+
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contactsOps";
@@ -16,7 +18,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form action={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <label className={styles.label}>
         Name
         <input
@@ -28,6 +30,7 @@ const ContactForm = () => {
         />
       </label>
       <label className={styles.label}>
+        Phone
         <input
           type="text"
           value={phone}
@@ -36,7 +39,7 @@ const ContactForm = () => {
           required
         />
       </label>
-      <button type="submint" className={styles.button}>
+      <button type="submit" className={styles.button}>
         Add contact
       </button>
     </form>

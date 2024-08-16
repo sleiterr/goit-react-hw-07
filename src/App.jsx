@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispach } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import ContactList from './components/ContactList/ContactList';
 import ContactForm from './components/ContactForm/ContactForm';
 import Filter from './components/Filter/Filter'; 
@@ -7,7 +7,7 @@ import { fetchContacts } from '../src/redux/contactsOps';
 import styles from "./App.module.css";
 
 const App = () => {
-  const dispatch = useDispach();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchContacts());
