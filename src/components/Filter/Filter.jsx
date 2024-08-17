@@ -10,6 +10,8 @@ const Filter = () => {
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
+    // console.log("Filter value:", e.target.value);
+    // console.log("Dispatching action with value:", e.target.value);
     dispatch(setFilter(e.target.value));
   };
 
